@@ -1,0 +1,172 @@
+/* 通用样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #f0f8ff, #e6e6e6);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2em;
+}
+
+/* 登录页面样式 */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+/* 愿望清单页面样式 */
+.wishlist-container {
+    max-width: 700px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+    overflow: hidden;
+}
+
+.wish-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.wish-list li {
+    background: #f8f9fa;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s, transform 0.2s;
+    position: relative;
+}
+
+.wish-list li:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.wish-list input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    font-size: 1em;
+}
+
+.btn-secondary {
+    background-color: #dc3545;
+}
+
+.btn-secondary:hover {
+    background-color: #c82333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.input-field {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 70%;
+    margin-right: 10px;
+    transition: border-color 0.3s;
+}
+
+.input-field:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* 没有愿望提示样式 */
+.no-wishes {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 按钮动画效果 */
+button {
+    position: relative;
+    overflow: hidden;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.4s;
+}
+
+button:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+

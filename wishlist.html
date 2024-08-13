@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>願望清單</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wishlist-container">
+        <h1>我的願望清單</h1>
+        <ul class="wish-list" id="wishList">
+            <!-- 願望項目將會在 JavaScript 中動態添加 -->
+        </ul>
+        <div id="wishActions">
+            <input type="text" id="newWishInput" placeholder="新增願望" class="input-field">
+            <button id="addWishBtn" class="btn btn-primary">新增願望</button>
+        </div>
+        <button id="logoutBtn" class="btn btn-secondary">登出</button>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
